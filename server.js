@@ -2,7 +2,9 @@ import express from "express";
 import crypto from "crypto";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+app.set("trust proxy", true);
 
 const urlStore = new Map();
 const reverseStore = new Map();
