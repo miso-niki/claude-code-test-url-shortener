@@ -107,6 +107,6 @@ app.get("/:code", (req, res) => {
   res.redirect(url);
 });
 
-app.listen(PORT, () => {
-  console.log(`URL shortener listening on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`URL shortener listening on port ${PORT}`);
 });
